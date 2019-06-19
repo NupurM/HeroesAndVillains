@@ -9,6 +9,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CharacterListComponent } from './characters/character-list/character-list.component';
 import { CharacterDetailsComponent } from './characters/character-details/character-details.component';
 import { DocumentationComponent } from './documentation/documentation.component';
+import { TechnologiesComponent } from './documentation/technologies/technologies.component';
+import { TheMeatComponent } from './documentation/the-meat/the-meat.component';
+import { WelcomeComponent } from './documentation/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { DocumentationComponent } from './documentation/documentation.component'
     DashboardComponent,
     CharacterListComponent,
     CharacterDetailsComponent,
-    DocumentationComponent
+    DocumentationComponent,
+    TechnologiesComponent,
+    TheMeatComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
