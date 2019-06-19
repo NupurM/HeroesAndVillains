@@ -1,3 +1,8 @@
-<p>
-  dashboard works!
-</p>
+<div class="row text-center justify-content-between mt-5">
+  <div *ngFor="let hero of heroes" class="col-2">
+    <a class="card text-center">
+      <img class="card-img-top" src={{hero.img}} alt={{hero.name}}>
+      <h5>{{hero.name}}</h5>
+    </a>
+  </div>
+</div>
