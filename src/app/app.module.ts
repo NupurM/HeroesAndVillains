@@ -5,12 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CharacterListComponent } from './characters/character-list/character-list.component';
+import { CharacterDetailsComponent } from './characters/character-details/character-details.component';
+import { DocumentationComponent } from './documentation/documentation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    DashboardComponent
+    DashboardComponent,
+    CharacterListComponent,
+    CharacterDetailsComponent,
+    DocumentationComponent
   ],
   imports: [
     BrowserModule,
