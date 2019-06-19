@@ -17,4 +17,18 @@ export class CharacterService {
   getActiveCharacters(profession: any): Character[] {
     return CHARACTERS.filter(character => character.profession === profession && character.status === Status.active);
   }
+
+  getCharacter(id: number): Character {
+    return CHARACTERS.find(character => character.id == id);
+  }
+
+  update(modifiedCharacter: Character): void {
+    let index: number = CHARACTERS.findIndex(character => character.id == modifiedCharacter.id);
+    CHARACTERS[index] = modifiedCharacter;
+  }
+
+  delete(id: number): void {
+    let index: number = CHARACTERS.findIndex(character => character.id == id);
+    CHARACTERS.splice(index, 1);
+  }
 }

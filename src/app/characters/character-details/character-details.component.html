@@ -1,3 +1,63 @@
 <p>
   character-details works!
 </p>
+<div *ngIf="character">
+  <form>
+      <h4>Edit Details:</h4>
+      <div class="form-group row">
+          <label for="character-name" class="col-sm-2 col-form-label">Name:</label>
+          <div class="col-sm-10">
+              <input [(ngModel)]="character.name" type="text" class="form-control" id="character-name" name="character-name" maxlength="20" />
+          </div>
+      </div>
+      <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Profession:</label>
+          <div class="col-sm-10">
+              <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                      <input [(ngModel)]="character.profession" type="radio" class="form-check-input" id="character-profession-hero" name="character-profession" value="Hero" checked />
+                      Hero
+                  </label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                      <input [(ngModel)]="character.profession" type="radio" class="form-check-input" id="character-profession-villain" name="character-profession" value="Villain" checked />
+                      Villain
+                  </label>
+              </div>
+          </div>
+      </div>
+      <div class="form-group row">
+          <label class="form-control-label col-sm-2">Status:</label>
+          <div class="col-sm-10">
+              <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                      <input [(ngModel)]="character.status" type="radio" class="form-check-input" id="character-status-active" name="character-status" value="Active" />
+                      Active
+                  </label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                      <input [(ngModel)]="character.status" type="radio" class="form-check-input" id="character-status-inactive" name="character-status" value="Inactive" />
+                      Inactive
+                  </label>
+              </div>
+          </div>
+      </div>
+      <div class="form-group row">
+          <label for="character-image" class="col-sm-2 form-control-label">Upload Image:</label>
+          <div class="col-sm-10">
+              <img src="{{character.img}}" id="character-image" [class.smallImg]="smallImg" (click)="smallImg = !smallImg" />
+          </div>
+      </div>
+      <div class="offset-sm-2">
+          <button class="btn"
+                  [ngClass]="{'btn-success':character.profession==='Hero','btn-danger':character.profession==='Villain'}"
+                  (click)="save()">
+              Save
+          </button>
+          <button class="btn btn-warning" (click)="delete(character)">Delete</button>
+      </div>
+  </form>
+  <img class="float-right" id="waldo" src="assets/images/extras/waldo.jpg" *ngIf="showWaldo" (click)="showWaldo = !showWaldo" />
+</div>
