@@ -1,8 +1,28 @@
-<div class="row text-center justify-content-between mt-5">
-  <div *ngFor="let hero of heroes" class="col-2">
-    <a class="card text-center">
-      <img class="card-img-top" src={{hero.img}} alt={{hero.name}}>
-      <h5>{{hero.name}}</h5>
-    </a>
+<div class="row no-gutters text-center">
+  <div class="col-lg-6 col-sm-12">
+      <h2>Active Heroes:</h2>
+      <div class="row no-gutters">
+          <div *ngFor="let hero of heroes" class="col-lg-4 col-sm-6">
+              <a class="card text-center" [routerLink]="['/details', hero.id]">
+                  <img class="card-img-top" src={{hero.img}} alt={{hero.name}}>
+                  <div class="card-block">
+                      <h5>{{hero.name}}</h5>
+                  </div>
+              </a>
+          </div>
+      </div>
+  </div>
+  <div class="col-lg-6 col-sm-12">
+      <h2>Active Villains:</h2>
+      <div class="row no-gutters">
+          <div *ngFor="let villain of villains" class="col-lg-4 col-sm-6">
+              <a class="card text-center" [routerLink]="['/details', villain.id]">
+                  <img class="card-img-top" src={{villain.img}} alt={{villain.name}}>
+                  <div class="card-block">
+                      <h5>{{villain.name}}</h5>
+                  </div>
+              </a>
+          </div>
+      </div>
   </div>
 </div>

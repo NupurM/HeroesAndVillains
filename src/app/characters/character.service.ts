@@ -10,7 +10,7 @@ export class CharacterService {
 
   constructor() { }
 
-  getCharacters(profession: any): Character[] {
-    return CHARACTERS.slice(0, 5);
+  getActiveCharacters(profession: any): Character[] {
+    return CHARACTERS.filter(character => character.profession === profession && character.status === Status.active);
   }
 }

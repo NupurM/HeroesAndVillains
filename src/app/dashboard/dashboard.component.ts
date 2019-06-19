@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
   constructor(private characterService: CharacterService) { }
 
   ngOnInit(): void {
-    this.heroes = this.characterService.getCharacters(Profession.hero);
+    this.heroes = this.characterService.getActiveCharacters(Profession.hero);
+    this.villains = this.characterService.getActiveCharacters(Profession.villain);
   }
-
 }
