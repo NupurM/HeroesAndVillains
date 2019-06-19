@@ -12,8 +12,8 @@ import { CharacterService } from '../character.service';
 })
 export class CharacterDetailsComponent implements OnInit {
   character: Character;
-  smallImg: Boolean = true;
-  showWaldo: Boolean = true;
+  smallImg: boolean = true;
+  showWaldo: boolean = true;
   id: number;
 
   constructor(
@@ -23,7 +23,7 @@ export class CharacterDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.id = +this.activatedRoute.snapshot.paramMap.get("id");
+    this.id = +this.activatedRoute.snapshot.paramMap.get('id');
     this.character = this.characterService.getCharacter(this.id);
   }
 

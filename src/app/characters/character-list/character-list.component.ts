@@ -11,10 +11,9 @@ import { CharacterService } from '../character.service';
 })
 export class CharacterListComponent implements OnInit {
   characters: Character[] = [];
-  profession: String;
+  profession: string;
 
-  constructor(private activatedRoute: ActivatedRoute,
-    private characterService: CharacterService) { }
+  constructor(private activatedRoute: ActivatedRoute, private characterService: CharacterService) { }
 
   ngOnInit() {
     this.profession = this.activatedRoute.snapshot.data['profession'];

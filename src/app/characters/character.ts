@@ -9,11 +9,11 @@
 }
 
 export enum Profession {
-    hero = <any>'Hero',
-    villain = <any>'Villain'
+    hero = 'Hero',
+    villain = 'Villain'
 }
 
 export enum Status {
-    active = <any>'Active',
-    inactive = <any>'Inactive'
+    active = 'Active',
+    inactive = 'Inactive'
 }
