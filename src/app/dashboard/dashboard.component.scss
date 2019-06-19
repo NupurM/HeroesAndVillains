@@ -1,9 +1,26 @@
+a {
+  text-decoration: none;
+}
+
 .card {
   border: none;
+
+  &:hover .card-block h5 {
+    font-weight: bold;
+}
 
   img {
     width: 100px;
     height: 150px;
     margin: auto;
+    border-radius: 50px;
   }
+}
+
+col-lg-6:first-child {
+  padding-right: 30px;
+}
+
+col-lg-6:last-child {
+  padding-left: 30px;
 }

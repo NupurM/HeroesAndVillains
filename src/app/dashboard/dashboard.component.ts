@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Character, Profession } from '../characters/character';
 import { CharacterService } from '../characters/character.service';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
