@@ -5,7 +5,7 @@
           <div *ngFor="let hero of heroes" class="col-lg-4 col-sm-6">
               <a class="card text-center" [routerLink]="['/details', hero.id]">
                   <img class="card-img-top" src={{hero.img}} alt={{hero.name}}>
-                  <div class="card-block">
+                  <div class="card-body">
                       <h5>{{hero.name}}</h5>
                   </div>
               </a>
@@ -18,7 +18,7 @@
           <div *ngFor="let villain of villains" class="col-lg-4 col-sm-6">
               <a class="card text-center" [routerLink]="['/details', villain.id]">
                   <img class="card-img-top" src={{villain.img}} alt={{villain.name}}>
-                  <div class="card-block">
+                  <div class="card-body">
                       <h5>{{villain.name}}</h5>
                   </div>
               </a>

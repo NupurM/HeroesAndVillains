@@ -10,7 +10,7 @@ a {
     flex-direction: row;
 
     &:hover {
-        border-color: gray;
+        filter: brightness(97%);
     }
 
     img {
@@ -19,9 +19,8 @@ a {
         border-radius: 3% 0 0 3%;
     }
 
-    .card-block {
+    .card-body {
         padding: 8px;
-        width: 100%;
 
         ul {
             margin: auto;

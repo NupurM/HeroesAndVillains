@@ -1,30 +1,31 @@
 <h2>Pick your {{profession|lowercase}}:</h2>
 <div class="row">
-  <div *ngFor="let character of characters" class="col-lg-6">
-      <a class="card" [ngClass]="{'card-outline-success':character.status ==='Active' && character.profession==='Hero',
-           'card-outline-danger':character.status ==='Active' && character.profession==='Villain'}"
-         [routerLink]="['/details', character.id]">
-          <img class="hidden-xs-down" src="{{character.img}}" />
-          <div class="card-block">
-              <div class="row no-gutters">
-                  <h4 class="card-title col-sm-7">{{character.name}}</h4>
-                  <div class="hidden-xs-down font-italic col-sm-5 small text-right">Current state: {{character.status}}</div>
-              </div>
-              <div class="row no-gutters">
-                  <div class="card-text col-sm-6">
-                      <h6 class="card-subtitle">Strengths:</h6>
-                      <ul>
-                          <li *ngFor="let strength of character.strengths">{{strength}}</li>
-                      </ul>
-                  </div>
-                  <div class="card-text col-sm-6">
-                      <h6 class="card-subtitle">Weaknesses:</h6>
-                      <ul>
-                          <li *ngFor="let weakness of character.weaknesses">{{weakness}}</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </a>
-  </div>
+    <div *ngFor="let character of characters" class="col-lg-6">
+        <a class="card" [ngClass]="{'border-success':character.status ==='Active' && character.profession==='Hero',
+           'border-danger':character.status ==='Active' && character.profession==='Villain'}"
+            [routerLink]="['/details', character.id]">
+            <img class="hidden-xs-down" src="{{character.img}}" />
+            <div class="card-body">
+                <div class="row no-gutters">
+                    <h4 class="card-title col-sm-7">{{character.name}}</h4>
+                    <div class="hidden-xs-down font-italic col-sm-5 small text-right">Current state:
+                        {{character.status}}</div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="card-text col-sm-6">
+                        <h6 class="card-subtitle">Strengths:</h6>
+                        <ul>
+                            <li *ngFor="let strength of character.strengths">{{strength}}</li>
+                        </ul>
+                    </div>
+                    <div class="card-text col-sm-6">
+                        <h6 class="card-subtitle">Weaknesses:</h6>
+                        <ul>
+                            <li *ngFor="let weakness of character.weaknesses">{{weakness}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
